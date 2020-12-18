@@ -17,7 +17,7 @@ RUN go mod download
 COPY . ./
 
 # Build the binary.
-RUN go build -mod=readonly -v -o server
+RUN go build -mod=readonly -o server cmd/cli/main.go
 
 # Use the official Debian slim image for a lean production container.
 # https://hub.docker.com/_/debian
